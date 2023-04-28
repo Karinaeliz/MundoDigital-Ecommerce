@@ -7,21 +7,32 @@ import LogoMundoDigital from './assest/LogoMundoDigital.png'
 const NavBar = () => {
     return (
         <header>
-            <Navbar bg="dark" variant="dark">
+            <Navbar bg="dark" variant="dark" expand="lg">
                 <Container>
-                    <Navbar.Brand>
+                    <Navbar.Brand >
                         <img src={LogoMundoDigital} alt="Logo Mundo Digital" width="60"
                         height="60"/>
                         <h1 className="display-6">Mundo Digital</h1>
                     </Navbar.Brand>
-                </Container>
-                <Nav className="me-auto">
-                    <Nav.Link>Notebooks</Nav.Link>
-                    <Nav.Link>Impresión</Nav.Link>
-                    <Nav.Link>Gamings</Nav.Link>
-                    <Nav.Link>Audio y Tv</Nav.Link>
-                </Nav>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className="ms-5" variant="tabs"  >
+                            <Nav.Item>
+                                <Nav.Link>Notebook</Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link>Impresión</Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link>Gamings</Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link>Audio y Tv</Nav.Link>
+                            </Nav.Item>
+                        </Nav>
+                    </Navbar.Collapse>
                 <CartWidget />
+                </Container>
             </Navbar>
         </header>
         
